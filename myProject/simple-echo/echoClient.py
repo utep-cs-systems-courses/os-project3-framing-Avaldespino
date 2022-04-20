@@ -52,7 +52,7 @@ if s is None:
     print('could not open socket')
     sys.exit(1)
 
-outMessage = "Hello world!".encode()
+outMessage = archive.archive(["File1.txt","File2.txt"])
 while len(outMessage):
     print("sending '%s'" % outMessage.decode())
     bytesSent = s.send(outMessage)
